@@ -17,7 +17,9 @@ Comx-35_Ports/
 │   ├── Engine/
 │   │   └── zm3.comx              ZM3 Z-machine interpreter v1.0
 │   └── Games/
-│       └── *.img                 18 Infocom story disks (ZM3 disk format)
+│   │   └── *.img                 18 Infocom story disks (ZM3 disk format)
+│   └── HFE/
+│       └── *.hfe                 HFE disk format for GreaseWeazle
 └── AI/
     ├── Lattern/                  LANTERN DEEP – cave platformer
     │   ├── LANTERN.comx
