@@ -13,7 +13,7 @@ Everything runs in the [Emma 02](https://www.emma02.hobby-site.com/) emulator, a
 
 ```
 Comx-35_Ports/
-├── InfoCom/
+├── Infocom/
 │   ├── Engine/
 │   │   └── zm3.comx              ZM3 Z-machine interpreter v1.0
 │   └── Games/
@@ -42,7 +42,7 @@ Comx-35_Ports/
 
 ## Infocom: the ZM3 interpreter
 
-`InfoCom/Engine/zm3.comx` is **ZM3 v1.0**, a Z-machine interpreter written for the COMX-35. It plays Infocom's version 3 story files, which covers most of the classic Infocom catalogue. It provides:
+`Infocom/Engine/zm3.comx` is **ZM3 v1.0**, a Z-machine interpreter written for the COMX-35. It plays Infocom's version 3 story files, which covers most of the classic Infocom catalogue. It provides:
 
 - the full v3 instruction set, with checks for illegal opcodes and division by zero
 - a status line showing score and moves
