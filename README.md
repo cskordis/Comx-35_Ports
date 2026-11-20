@@ -19,7 +19,7 @@ Comx-35_Ports/
 │   └── Games/
 │   │   └── *.img                 18 Infocom story disks (ZM3 disk format)
 │   └── HFE/
-│       └── *.hfe                 HFE disk format for GreaseWeazle
+│       └── *.hfe                 HFE disk format for GreaseWeazle. To load and run disk images use command DOS URUN,"ZM3"
 └── AI/
     ├── Lattern/                  LANTERN DEEP – cave platformer
     │   ├── LANTERN.comx
