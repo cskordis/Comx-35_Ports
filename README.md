@@ -17,7 +17,9 @@ Comx-35_Ports/
 │   ├── Engine/
 │   │   └── zm3.comx              ZM3 Z-machine interpreter v1.0
 │   └── Games/
-│   │   └── *.img                 18 Infocom story disks (ZM3 disk format)
+│   │   └── *.img                 18 Infocom story disks (ZM3 disk format) Need to load ZM3 on FDC1 
+│   └── GamesWithZM3/
+│   │   └── *.img                 18 Infocom story disks with ZM3. To load and run disk images use command DOS URUN,"ZM3"
 │   └── HFE/
 │       └── *.hfe                 HFE disk format for GreaseWeazle. To load and run disk images use command DOS URUN,"ZM3"
 └── AI/
