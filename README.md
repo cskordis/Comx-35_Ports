@@ -2,8 +2,8 @@
 
 Games and programs ported to, or recreated for, the **COMX-35**, the 1983 RCA CDP1802-based home computer. The collection has two parts:
 
-- **InfoCom/** – a Z-machine (version 3) interpreter for the COMX-35, plus 18 Infocom text adventures prepared as story disks for it.
-- **AI Generated/** – new COMX-35 versions of classic games and programs, written with AI assistance. Each project includes documentation where available.
+- **InfoCom/** — a Z-machine (version 3) interpreter for the COMX-35, plus 18 Infocom text adventures prepared as story disks for it.
+- **AI Generated/** — new COMX-35 versions of classic games and programs, written with AI assistance. Each project includes documentation where available.
 
 Everything runs in the [Emma 02](https://www.emma02.hobby-site.com/) emulator, and on real COMX-35 hardware (PAL or NTSC) with a disk drive, or by tape through a cassette interface.
 
@@ -33,6 +33,11 @@ Comx-35_Ports/
 │   ├── Oregon Trail/
 │   │   ├── OT1978.comx
 │   │   └── OT1990.comx
+│   ├── Star Legion/
+│   │   ├── LEGION.ASM
+│   │   ├── LEGION.comx
+│   │   ├── LEGION.img
+│   │   └── STAR LEGION Guide.pdf
 │   ├── Super Trek/
 │   │   ├── SSTREK.BAS
 │   │   ├── SSTREK.comx
@@ -88,6 +93,13 @@ Two COMX-35 BASIC versions:
 - **`OT1990.comx`** recreates the 1990 MECC DOS version 2.0.
 
 **To run:** load the file and type `RUN`.
+
+### Star Legion (`AI Generated/Star Legion/`)
+
+A COMX-35 space strategy and exploration program. The directory includes assembly source (`LEGION.ASM`), executable (`LEGION.comx`), disk image (`LEGION.img`), and `STAR LEGION Guide.pdf`.
+
+- **To run:** load `LEGION.comx` and type `RUN`, or use `LEGION.img` in a disk drive.
+- See `STAR LEGION Guide.pdf` for gameplay instructions.
 
 ### Super Star Trek (`AI Generated/Super Trek/`)
 
