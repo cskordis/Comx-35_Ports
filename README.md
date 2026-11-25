@@ -36,7 +36,7 @@ Comx-35_Ports/
     |   ├── SSTREK.comx           Super Star Trek
     |   ├── SSTREK.BAS            BASIC source listing
     |   └── SSTREK_Instructions.pdf
-``` └── Trek/
+    └── Trek/
     |   ├── TREK.comx           Trek
     |   ├── TREK.img            
     |   └── TREK_Instructions.pdf
