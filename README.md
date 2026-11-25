@@ -22,7 +22,7 @@ Comx-35_Ports/
 │   │   └── *.img                 18 Infocom story disks with ZM3. To load and run disk images use command DOS URUN,"ZM3"
 │   └── HFE/
 │       └── *.hfe                 HFE disk format for GreaseWeazle. To load and run disk images use command DOS URUN,"ZM3"
-└── AI/
+└── AI Generated/
     ├── Lattern/                  LANTERN DEEP – cave platformer
     │   ├── LANTERN.comx
     │   └── Lantern_Deep_Players_Guide.pdf
@@ -33,11 +33,20 @@ Comx-35_Ports/
     │   ├── OT1978.comx           Oregon Trail (1978 BASIC)
     │   └── OT1990.comx           Oregon Trail (1990 MECC DOS v2.0)
     └── SuperTrek/
-        ├── SSTREK.comx           Super Star Trek
-        ├── SSTREK.BAS            BASIC source listing
-        └── SSTREK_Instructions.pdf
-```
+    |   ├── SSTREK.comx           Super Star Trek
+    |   ├── SSTREK.BAS            BASIC source listing
+    |   └── SSTREK_Instructions.pdf
+``` └── Trek/
+    |   ├── TREK.comx           Trek
+    |   ├── TREK.img            
+    |   └── TREK_Instructions.pdf
+    └── Crater Run/
+    |   ├── Crater.comx           Crater Run (Moon Patrol Clone)
+    |   ├── Crater.img            
+    |   └── Crater Run Guide.pdf
 
+
+    
 `.comx` files are in the standard COMX-35 program format used by Emma 02. They can be loaded in the emulator, from disk, or by tape with `PLOAD`.
 
 ---
