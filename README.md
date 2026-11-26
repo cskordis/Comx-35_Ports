@@ -16,7 +16,7 @@ Comx-35_Ports/
 ├── InfoCom/
 │   ├── Engine/
 │   │   └── zm3.comx
-│   ├── Games/                         # Story disk images
+│   ├── Games/                         # Original story disk images
 │   │   ├── ballyhoo.img
 │   │   ├── cutthroats.img
 │   │   ├── deadline.img
@@ -91,6 +91,12 @@ Comx-35_Ports/
 │   ├── Manic Miner/
 │   │   ├── MANIC.comx
 │   │   └── Manic_Miner_COMX_Guide.pdf
+│   ├── Orbital War/
+│   │   ├── ORBITAL WAR Guide.pdf
+│   │   ├── ORBWAR.ASM
+│   │   ├── ORBWAR.asm
+│   │   ├── ORBWAR.comx
+│   │   └── ORBWAR.img
 │   ├── Oregon Trail/
 │   │   ├── OT1978.comx
 │   │   └── OT1990.comx
