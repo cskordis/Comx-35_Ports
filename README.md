@@ -17,17 +17,17 @@ Everything runs in the [Emma 02](https://www.emma02.hobby-site.com/) emulator, a
 
 ### Crater Run (`AI Generated/Crater Run/`)
 
-A COMX-35 recreation of the arcade-style moon rover game. The directory includes assembly source, a `.comx` program, a disk image, and the `CRATER RUN Guide.pdf` player guide.
+A COMX-35 recreation of the arcade-style moon rover game like Moon Buggy. The directory includes assembly source, a `.comx` program, a disk image, and the `CRATER RUN Guide.pdf` player guide.
 
 ### Fortress Raid (`AI Generated/Fortress Raid/`)
 
-An original altitude shooter for the COMX-35. The directory includes assembly source (`FORTRAID.ASM`), executable (`FORTRAID.comx`), disk image (`FORTRAID.img`), and `FORTRESS RAID Guide.pdf`.
+An original altitude shooter similar to Zaxxon for the COMX-35. The directory includes assembly source (`FORTRAID.ASM`), executable (`FORTRAID.comx`), disk image (`FORTRAID.img`), and `FORTRESS RAID Guide.pdf`.
 
 - **To run:** load `FORTRAID.comx` and call `@4500`.
 
 ### LANTERN DEEP (`AI Generated/Lattern/`)
 
-A machine-code cave platformer. Explore 8 wide by 29 deep rooms of ledges, ladders, an underground river and a balloon ride. Collect gold and light lanterns while avoiding hazards.
+A machine-code cave platformer similar to Pitfall. Explore 8 wide by 29 deep rooms of ledges, ladders, an underground river and a balloon ride. Collect gold and light lanterns while avoiding hazards.
 
 - Controls are the cursor keys, joystick or WASD.
 - `M` toggles music, `E` toggles sound effects, and `Esc`/`Q` quits to BASIC.
