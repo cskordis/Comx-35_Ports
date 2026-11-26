@@ -9,121 +9,6 @@ Everything runs in the [Emma 02](https://www.emma02.hobby-site.com/) emulator, a
 
 ---
 
-## Repository layout
-
-```
-Comx-35_Ports/
-├── InfoCom/
-│   ├── Engine/
-│   │   └── zm3.comx
-│   ├── Games/                         # Original story disk images
-│   │   ├── ballyhoo.img
-│   │   ├── cutthroats.img
-│   │   ├── deadline.img
-│   │   ├── enchanter.img
-│   │   ├── hhgg.img
-│   │   ├── infidel.img
-│   │   ├── leather_goddesses_of_phobos.img
-│   │   ├── moonmist.img
-│   │   ├── planetfall.img
-│   │   ├── plundered_hearts.img
-│   │   ├── seastalker.img
-│   │   ├── starcross.img
-│   │   ├── suspect.img
-│   │   ├── suspended.img
-│   │   ├── witness.img
-│   │   ├── zork1.img
-│   │   ├── zork2.img
-│   │   └── zork_3.img
-│   ├── GamesWithZM3/                   # Story images prepared for the ZM3 engine
-│   │   ├── ballyhoo.img
-│   │   ├── comx.cfg
-│   │   ├── cutthroats.img
-│   │   ├── deadline.img
-│   │   ├── enchanter.img
-│   │   ├── hhgg.img
-│   │   ├── infidel.img
-│   │   ├── leather_goddesses_of_phobos.img
-│   │   ├── moonmist.img
-│   │   ├── planetfall.img
-│   │   ├── plundered_hearts.img
-│   │   ├── seastalker.img
-│   │   ├── starcross.img
-│   │   ├── suspect.img
-│   │   ├── suspended.img
-│   │   ├── witness.img
-│   │   ├── zork1.img
-│   │   ├── zork2.img
-│   │   └── zork3.img
-│   └── HFE Format/                     # HFE disk images
-│       ├── ballyhoo.hfe
-│       ├── cutthroats.hfe
-│       ├── deadline.hfe
-│       ├── enchanter.hfe
-│       ├── hhgg.hfe
-│       ├── infidel.hfe
-│       ├── leather_goddesses_of_phobos.hfe
-│       ├── moonmist.hfe
-│       ├── planetfall.hfe
-│       ├── plundered_hearts.hfe
-│       ├── seastalker.hfe
-│       ├── starcross.hfe
-│       ├── suspect.hfe
-│       ├── suspended.hfe
-│       ├── witness.hfe
-│       ├── zork1.hfe
-│       ├── zork2.hfe
-│       └── zork3.hfe
-├── AI Generated/
-│   ├── Crater Run/
-│   │   ├── CRATER.ASM
-│   │   ├── CRATER.comx
-│   │   ├── CRATER.img
-│   │   ├── CRATER RUN Guide.pdf
-│   │   └── Crater.asm
-│   ├── Lattern/
-│   │   ├── LANTERN.comx
-│   │   ├── LATERN.comx
-│   │   └── Lantern_Deep_Players_Guide.pdf
-│   ├── Life/
-│   │   ├── Life.comx
-│   │   └── Life_User_Guide.pdf
-│   ├── Manic Miner/
-│   │   ├── MANIC.comx
-│   │   └── Manic_Miner_COMX_Guide.pdf
-│   ├── Orbital War/
-│   │   ├── ORBITAL WAR Guide.pdf
-│   │   ├── ORBWAR.ASM
-│   │   ├── ORBWAR.asm
-│   │   ├── ORBWAR.comx
-│   │   └── ORBWAR.img
-│   ├── Oregon Trail/
-│   │   ├── OT1978.comx
-│   │   └── OT1990.comx
-│   ├── Star Legion/
-│   │   ├── LEGION.ASM
-│   │   ├── LEGION.comx
-│   │   ├── LEGION.img
-│   │   ├── Legion.comx
-│   │   └── STAR LEGION Guide.pdf
-│   ├── Super Trek/
-│   │   ├── SSTREK.BAS
-│   │   ├── SSTREK.comx
-│   │   └── SSTREK_Instructions.pdf
-│   ├── The Hobbit/
-│   │   ├── HOBBIT.comx
-│   │   ├── HOBBIT.img
-│   │   └── The_Hobbit_COMX_Guide.pdf
-│   └── Trek/
-│       ├── TREK.ASM
-│       ├── TREK.comx
-│       ├── TREK.img
-│       ├── TREK Guide.pdf
-│       ├── Trek Guide.pdf
-│       └── Trek.comx
-└── README.md
-```
-
 `.comx` files are in the standard COMX-35 program format used by Emma 02. They can be loaded in the emulator, from disk, or by tape with `PLOAD`.
 
 ---
@@ -133,6 +18,12 @@ Comx-35_Ports/
 ### Crater Run (`AI Generated/Crater Run/`)
 
 A COMX-35 recreation of the arcade-style moon rover game. The directory includes assembly source, a `.comx` program, a disk image, and the `CRATER RUN Guide.pdf` player guide.
+
+### Fortress Raid (`AI Generated/Fortress Raid/`)
+
+An original altitude shooter for the COMX-35. The directory includes assembly source (`FORTRAID.ASM`), executable (`FORTRAID.comx`), disk image (`FORTRAID.img`), and `FORTRESS RAID Guide.pdf`.
+
+- **To run:** load `FORTRAID.comx` and call `@4500`.
 
 ### LANTERN DEEP (`AI Generated/Lattern/`)
 
