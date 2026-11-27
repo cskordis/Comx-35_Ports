@@ -90,6 +90,12 @@ A COMX-35 BASIC version of the 1978 **Super Star Trek**. It includes `SSTREK.com
 - **To run:** load `SSTREK.comx` and type `RUN`, or run it from BASIC after loading.
 - See `SSTREK_Instructions.pdf` for the full command reference.
 
+### TAIL WIND (`AI Generated/Tail Wind/`)
+
+A COMX-35 flight-themed game. The directory includes assembly source (`TAIL WIND.ASM`), executable programs (`TAIL WIND.comx` and `TailWind.comx`), a disk image (`TAIL WIND.img`), and `TAIL WIND Guide.pdf`.
+
+- **To run:** load `TAIL WIND.comx` and follow the instructions in `TAIL WIND Guide.pdf`.
+
 ### The Hobbit (`AI Generated/The Hobbit/`)
 
 A COMX-35 port of **The Hobbit**, including `HOBBIT.comx`, `HOBBIT.img`, and `The_Hobbit_COMX_Guide.pdf`.
