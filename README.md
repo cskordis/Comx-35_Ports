@@ -25,14 +25,30 @@ An original altitude shooter similar to Zaxxon for the COMX-35. The directory in
 
 - **To run:** load `FORTRAID.comx` and call `@4500`.
 
+### Grand Circuit (`AI Generated/Grand Circuit/`)
+
+A COMX-35 racing game inspired by Formula 1, with qualifying and Grand Prix modes, a 2-player mode, live timing, track selection, pit stops, and 7 weather types.
+
+- **Files:** assembly source (`CIRCUIT.ASM`), executable (`CIRCUIT.comx`), disk image (`CIRCUIT.img`), and `GRAND CIRCUIT Guide.pdf`.
+- **To run:** load `CIRCUIT.comx` and call `@4500`.
+- See `GRAND CIRCUIT Guide.pdf` for the player guide.
+
 ### LANTERN DEEP (`AI Generated/Lattern/`)
 
-A machine-code cave platformer similar to Pitfall. Explore 8 wide by 29 deep rooms of ledges, ladders, an underground river and a balloon ride. Collect gold and light lanterns while avoiding hazards.
+A machine-code cave platformer similar to Pitfall. Explore 8 wide by 29 deep rooms of ledges, ladders, an underground river and a balloon ride. Collect gold and light lanterns while avoiding hazards and enemies.
 
 - Controls are the cursor keys, joystick or WASD.
 - `M` toggles music, `E` toggles sound effects, and `Esc`/`Q` quits to BASIC.
 - **To run:** load `LANTERN.comx` and type `RUN`.
 - See `Lantern_Deep_Players_Guide.pdf` for the full guide.
+
+### Lily Leap (`AI Generated/Lily Leap/`)
+
+A colorful arcade game for the COMX-35 in which the player leaps between lily pads, avoiding hazards and gathering collectibles.
+
+- **Files:** assembly source (`LILY LEAP.ASM`), executable (`LILY LEAP.comx`), disk image (`LILY LEAP.img`), and `LILY LEAP Guide.pdf`.
+- **To run:** load `LILY LEAP.comx` and call `@4500`.
+- See `LILY LEAP Guide.pdf` for the player guide.
 
 ### COMX-35 Color Life (`AI Generated/Life/`)
 
@@ -46,6 +62,10 @@ Conway's Game of Life on a 40 × 23 grid, with colors indicating how long each c
 ### Manic Miner (`AI Generated/Manic Miner/`)
 
 A COMX-35 recreation of **Manic Miner**. The directory contains the executable `MANIC.comx` and `Manic_Miner_COMX_Guide.pdf`.
+
+### Orbital War (`AI Generated/Orbital War/`)
+
+A COMX-35 space strategy game. The directory includes the assembly source, executable, disk image, and player guide.
 
 ### The Oregon Trail (`AI Generated/Oregon Trail/`)
 
@@ -90,4 +110,4 @@ A COMX-35 version of **Trek**, with assembly source (`TREK.ASM`), executable (`T
 
 ## Legal
 
-The Infocom games are copyright their original rights holders (Infocom / Activision). The Oregon Trail is a trademark of its respective owner, and Super Star Trek is based on the 1978 public BASIC source. Other included games and recreated brands remain the property of their respective owners.
+The Infocom games are copyright their original rights holders (Infocom / Activision). The Oregon Trail is a trademark of its respective owner, and Super Star Trek is based on the 1978 public BASIC program. See each project directory for attribution and licensing information where available.
