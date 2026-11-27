@@ -44,7 +44,7 @@ A machine-code cave platformer similar to Pitfall. Explore 8 wide by 29 deep roo
 
 ### Lily Leap (`AI Generated/Lily Leap/`)
 
-A colorful arcade game for the COMX-35 in which the player leaps between lily pads, avoiding hazards and gathering collectibles.
+A colorful arcade Frogger like game for the COMX-35 in which the player leaps between lily pads, avoiding hazards and gathering collectibles.
 
 - **Files:** assembly source (`LILY LEAP.ASM`), executable (`LILY LEAP.comx`), disk image (`LILY LEAP.img`), and `LILY LEAP Guide.pdf`.
 - **To run:** load `LILY LEAP.comx` and call `@4500`.
