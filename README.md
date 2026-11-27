@@ -15,6 +15,13 @@ Everything runs in the [Emma 02](https://www.emma02.hobby-site.com/) emulator, a
 
 ## AI Generated projects
 
+### Cave Rescue (`AI Generated/Cave Rescue/`)
+
+An original cave-rescue action game for the COMX-35. The directory includes assembly source (`CAVE.ASM`), executable (`CAVE.comx`), disk image (`CAVE.img`), and `CAVE_RESCUE_Guide.pdf`.
+
+- **To run:** load `CAVE.comx` and call `@4500`.
+- See `CAVE_RESCUE_Guide.pdf` for the player guide.
+
 ### Crater Run (`AI Generated/Crater Run/`)
 
 A COMX-35 recreation of the arcade-style moon rover game like Moon Buggy. The directory includes assembly source, a `.comx` program, a disk image, and the `CRATER RUN Guide.pdf` player guide.
