@@ -92,7 +92,7 @@ A COMX-35 BASIC version of the 1978 **Super Star Trek**. It includes `SSTREK.com
 
 ### TAIL WIND (`AI Generated/Tail Wind/`)
 
-A COMX-35 flight-themed game. The directory includes assembly source (`TAIL WIND.ASM`), executable programs (`TAIL WIND.comx` and `TailWind.comx`), a disk image (`TAIL WIND.img`), and `TAIL WIND Guide.pdf`.
+A COMX-35 flight-themed game similar to 1942. The directory includes assembly source (`TAIL WIND.ASM`), executable programs (`TAIL WIND.comx` and `TailWind.comx`), a disk image (`TAIL WIND.img`), and `TAIL WIND Guide.pdf`.
 
 - **To run:** load `TAIL WIND.comx` and follow the instructions in `TAIL WIND Guide.pdf`.
 
