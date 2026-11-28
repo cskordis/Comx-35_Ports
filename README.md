@@ -32,6 +32,13 @@ An original altitude shooter similar to Zaxxon for the COMX-35. The directory in
 
 - **To run:** load `FORTRAID.comx` and call `@4500`.
 
+### Gambit (`AI Generated/Gambit/`)
+
+An original chess program for the COMX-35. The directory includes assembly source (`GAMBIT.ASM`), executable (`GAMBIT.comx`), disk image (`GAMBIT.img`), and `GAMBIT_Guide.pdf`.
+
+- **To run:** load `GAMBIT.comx` and call `@4500`.
+- See `GAMBIT_Guide.pdf` for the player guide.
+
 ### Grand Circuit (`AI Generated/Grand Circuit/`)
 
 A COMX-35 racing game inspired by Formula 1, with qualifying and Grand Prix modes, a 2-player mode, live timing, track selection, pit stops, and 7 weather types.
@@ -42,7 +49,7 @@ A COMX-35 racing game inspired by Formula 1, with qualifying and Grand Prix mode
 
 ### LANTERN DEEP (`AI Generated/Lattern/`)
 
-A machine-code cave platformer similar to Pitfall. Explore 8 wide by 29 deep rooms of ledges, ladders, an underground river and a balloon ride. Collect gold and light lanterns while avoiding hazards and enemies.
+A machine-code cave platformer similar to Pitfall. Explore 8 wide by 29 deep rooms of ledges, ladders, an underground river and a balloon ride. Collect gold and light lanterns while avoiding hazards.
 
 - Controls are the cursor keys, joystick or WASD.
 - `M` toggles music, `E` toggles sound effects, and `Esc`/`Q` quits to BASIC.
@@ -123,4 +130,4 @@ A COMX-35 version of **Trek**, with assembly source (`TREK.ASM`), executable (`T
 
 ## Legal
 
-The Infocom games are copyright their original rights holders (Infocom / Activision). The Oregon Trail is a trademark of its respective owner, and Super Star Trek is based on the 1978 public BASIC program. See each project directory for attribution and licensing information where available.
+The Infocom games are copyright their original rights holders (Infocom / Activision). The Oregon Trail is a trademark of its respective owner, and Super Star Trek is based on the 1978 public BASIC source. The remaining projects are fan recreations or original software; their rights belong to their respective creators and rights holders.
