@@ -14,21 +14,21 @@ S_RF    EQU     0F3H
 S_RC    EQU     0F2H
 S_LF    EQU     0F1H
 S_LC    EQU     0F0H
-SCOREC  EQU     0AA64H
-PSTEER  EQU     0AA63H
-CRX     EQU     0AA62H
-VIS     EQU     0AA61H
-SLOT    EQU     0AA60H
-ROWN    EQU     0AA5FH
-CCH     EQU     0AA5EH
-KCH     EQU     0AA5DH
-NPH     EQU     0AA5CH
-NCF     EQU     0AA5BH
-NCC     EQU     0AA5AH
-NRF     EQU     0AA59H
-NRC     EQU     0AA58H
-NLF     EQU     0AA57H
-NLC     EQU     0AA56H
+SCOREC  EQU     0AA66H
+PSTEER  EQU     0AA65H
+CRX     EQU     0AA64H
+VIS     EQU     0AA63H
+SLOT    EQU     0AA62H
+ROWN    EQU     0AA61H
+CCH     EQU     0AA60H
+KCH     EQU     0AA5FH
+NPH     EQU     0AA5EH
+NCF     EQU     0AA5DH
+NCC     EQU     0AA5CH
+NRF     EQU     0AA5BH
+NRC     EQU     0AA5AH
+NLF     EQU     0AA59H
+NLC     EQU     0AA58H
 CRAM    EQU     0F400H
 R3ON    EQU     000C0H
 R3OFF   EQU     000D0H
@@ -123,6 +123,8 @@ LASTSEG EQU     0AA52H
 ENG     EQU     0AA53H
 FINISH  EQU     0AA54H
 OFFRD   EQU     0AA55H
+SQL     EQU     0AA56H
+ENGL    EQU     0AA57H
         ORG     4500H
 START   SEX     R2
         GLO     R1
@@ -263,6 +265,13 @@ VIDOFF  SEX     R3
         OUT     3
         BYTE    R3OFF
         SEX     R2
+        LDI     0CH
+        PHI     RF
+        LDI     0
+        PLO     RF
+VOF0    DEC     RF
+        GHI     RF
+        BNZ     VOF0
         SEP     R5
 ; WAITVB - return at the start of the non-display period
 WAITVB
@@ -2809,6 +2818,16 @@ DR3
         PLO     RA
         LDN     RA
         LBZ     DR6
+        NOP
+        NOP
+        NOP
+        NOP
+        NOP
+        NOP
+        NOP
+        NOP
+        NOP
+        NOP
         B2      DR4
         LDI     HIGH (HELD)
         PHI     RA
@@ -2866,48 +2885,12 @@ DRSQ
         LDN     RA
         SMI     170
         LBNF    DR6
-        LDI     HIGH (SNDT)
+        LDI     HIGH (SQL)
         PHI     RA
-        LDI     LOW (SNDT)
+        LDI     LOW (SQL)
         PLO     RA
-        LDN     RA
-        SMI     2
-        LBDF    DR6
-        LDI     HIGH (FRM+1)
-        PHI     RA
-        LDI     LOW (FRM+1)
-        PLO     RA
-        LDN     RA
-        ANI     1
-        LBZ     DRSQ1
-        LDI     HIGH (SNDS)
-        PHI     RA
-        LDI     LOW (SNDS)
-        PLO     RA
-        LDI     1
-        STR     RA
-        LDI     HIGH (0726H)
-        PHI     RC
-        LDI     LOW (0726H)
-        PLO     RC
         LDI     3
-        SEP     R4
-        WORD    SOUND
-        LBR     DR6
-DRSQ1
-        LDI     HIGH (SNDS)
-        PHI     RA
-        LDI     LOW (SNDS)
-        PLO     RA
-        LDI     1
         STR     RA
-        LDI     HIGH (0526H)
-        PHI     RC
-        LDI     LOW (0526H)
-        PLO     RC
-        LDI     3
-        SEP     R4
-        WORD    SOUND
         LBR     DR6
 DR6
         LDI     HIGH (GEAR)
@@ -4934,34 +4917,135 @@ ENGINE
         LDI     LOW (SNDT)
         PLO     RA
         LDN     RA
-        LBNZ    ENX
+        LBZ     EG0
+        LDI     HIGH (ENGL)
+        PHI     RA
+        LDI     LOW (ENGL)
+        PLO     RA
+        LDI     0
+        STR     RA
+        SEP     R5
+EG0
+        LDI     HIGH (SQL)
+        PHI     RA
+        LDI     LOW (SQL)
+        PLO     RA
+        LDN     RA
+        LBZ     EG1
+        SMI     1
+        STR     RA
+        LDI     HIGH (ENGL)
+        PHI     RA
+        LDI     LOW (ENGL)
+        PLO     RA
+        LDI     0
+        STR     RA
+        SEP     R4
+        WORD    RAND
+        ANI     3
+        ADI     13
+        PHI     RF
+        LDI     33H
+        PLO     RF
+        SEX     RF
+        OUT     4
+        SEX     R2
+        SEP     R5
+EG1
         LDI     HIGH (SPD)
         PHI     RA
         LDI     LOW (SPD)
         PLO     RA
         LDN     RA
-        SHR
-        STR     R2
+        PLO     R9
         LDI     HIGH (GEAR)
         PHI     RA
         LDI     LOW (GEAR)
         PLO     RA
         LDN     RA
-        LBZ     EN1
-        LDI     150
-        LBR     EN2
-EN1     LDI     120
-EN2     SM
-        SMI     20
-        LBDF    EN3
-        LDI     0
-EN3     ADI     20
+        LBNZ    EN1
+        GLO     R9
+        SHR
+        STR     R2
+        GLO     R9
+        ADD
+        LBNF    EN0
+        LDI     255
+EN0     PLO     R9
+EN1     GLO     R9
+        XRI     0FFH
+        SHR
+        SHR
+        SHR
+        PLO     R9
+        SHR
+        STR     R2
+        GLO     R9
+        ADD
+        ADI     10
+        PLO     R9
+        LDI     HIGH (ENG)
+        PHI     RA
+        LDI     LOW (ENG)
+        PLO     RA
+        LDN     RA
+        STR     R2
+        GLO     R9
+        SM
+        LBZ     EN5
+        LBNF    EN3
+        SMI     1
+        LBZ     EN5
+        LDI     HIGH (ENG)
+        PHI     RA
+        LDI     LOW (ENG)
+        PLO     RA
+        LDN     RA
+        ADI     1
+        STR     RA
+        LBR     EN5
+EN3     ADI     1
+        LBZ     EN5
+        LDI     HIGH (ENG)
+        PHI     RA
+        LDI     LOW (ENG)
+        PLO     RA
+        LDN     RA
+        SMI     1
+        STR     RA
+EN5
+        LDI     HIGH (ENG)
+        PHI     RA
+        LDI     LOW (ENG)
+        PLO     RA
+        LDN     RA
+        STR     R2
+        LDI     HIGH (ENGL)
+        PHI     RA
+        LDI     LOW (ENGL)
+        PLO     RA
+        LDN     RA
+        XOR
+        LBZ     ENX
+        LDI     HIGH (ENG)
+        PHI     RA
+        LDI     LOW (ENG)
+        PLO     RA
+        LDN     RA
+        PLO     R7
+        LDI     HIGH (ENGL)
+        PHI     RA
+        LDI     LOW (ENGL)
+        PLO     RA
+        GLO     R7
+        STR     RA
         PHI     RF
-        LDI     23H
+        LDI     04H
         PLO     RF
         SEX     RF
         OUT     4
         SEX     R2
+ENN
 ENX     SEP     R5
 CLOCK
         LDI     HIGH (STMR)
@@ -5095,6 +5179,24 @@ SETUP
         WORD    VIDOFF
         SEP     R4
         WORD    SILENCE
+        LDI     HIGH (ENG)
+        PHI     RA
+        LDI     LOW (ENG)
+        PLO     RA
+        LDI     56
+        STR     RA
+        LDI     HIGH (ENGL)
+        PHI     RA
+        LDI     LOW (ENGL)
+        PLO     RA
+        LDI     0
+        STR     RA
+        LDI     HIGH (SQL)
+        PHI     RA
+        LDI     LOW (SQL)
+        PLO     RA
+        LDI     0
+        STR     RA
         SEP     R4
         WORD    THEME
         LDI     HIGH (DIRECT)
@@ -6503,15 +6605,6 @@ TKX8
         PHI     RA
         LDI     LOW (LASTD)
         PLO     RA
-        NOP
-        NOP
-        NOP
-        NOP
-        NOP
-        NOP
-        NOP
-        NOP
-        NOP
         B1      TKD9
         LDN     RA
         LBZ     TKX9
@@ -7052,10 +7145,22 @@ TX18     TEXT    "ESC         QUIT"
         BYTE    0
 TX19     TEXT    "HI"
         BYTE    0
-TUNE    BYTE    010H, 005H, 010H, 005H, 012H, 005H, 010H, 00AH, 014H, 005H, 012H, 005H, 010H, 00AH, 00DH, 00AH
-        BYTE    010H, 005H, 012H, 005H, 014H, 00AH, 018H, 005H, 014H, 005H, 012H, 014H, 07FH, 005H, 014H, 005H
-        BYTE    014H, 005H, 015H, 005H, 014H, 00AH, 018H, 005H, 015H, 005H, 014H, 00AH, 010H, 00AH, 012H, 005H
-        BYTE    014H, 005H, 015H, 00AH, 01BH, 005H, 015H, 005H, 014H, 014H, 07FH, 028H, 000H
+TUNE    BYTE    014H, 010H, 010H, 008H, 00DH, 008H, 010H, 010H, 014H, 010H, 012H, 008H, 010H, 008H, 00FH, 010H
+        BYTE    010H, 010H, 012H, 010H, 014H, 010H, 012H, 008H, 010H, 008H, 012H, 010H, 01BH, 010H, 015H, 010H
+        BYTE    014H, 010H, 010H, 008H, 00DH, 008H, 00CH, 010H, 00DH, 010H, 00FH, 008H, 010H, 008H, 012H, 010H
+        BYTE    010H, 010H, 014H, 010H, 012H, 010H, 015H, 010H, 014H, 020H, 07FH, 010H, 014H, 010H, 010H, 008H
+        BYTE    00DH, 008H, 010H, 010H, 014H, 010H, 012H, 008H, 010H, 008H, 00FH, 010H, 010H, 010H, 012H, 010H
+        BYTE    014H, 010H, 012H, 008H, 010H, 008H, 012H, 010H, 01BH, 010H, 015H, 010H, 014H, 010H, 010H, 008H
+        BYTE    00DH, 008H, 00CH, 010H, 00DH, 010H, 00FH, 008H, 010H, 008H, 012H, 010H, 010H, 010H, 014H, 010H
+        BYTE    012H, 010H, 015H, 010H, 014H, 020H, 07FH, 010H, 018H, 010H, 014H, 010H, 00FH, 010H, 00CH, 010H
+        BYTE    00DH, 010H, 00FH, 008H, 010H, 008H, 012H, 020H, 01BH, 010H, 015H, 010H, 012H, 010H, 00DH, 010H
+        BYTE    00FH, 010H, 010H, 008H, 012H, 008H, 010H, 020H, 018H, 010H, 014H, 010H, 010H, 010H, 00CH, 010H
+        BYTE    00DH, 010H, 010H, 010H, 00FH, 010H, 012H, 010H, 00DH, 018H, 00FH, 008H, 010H, 010H, 012H, 010H
+        BYTE    00DH, 020H, 07FH, 010H, 014H, 010H, 010H, 008H, 00DH, 008H, 010H, 010H, 014H, 010H, 012H, 008H
+        BYTE    010H, 008H, 00FH, 010H, 010H, 010H, 012H, 010H, 014H, 010H, 012H, 008H, 010H, 008H, 012H, 010H
+        BYTE    01BH, 010H, 015H, 010H, 014H, 010H, 010H, 008H, 00DH, 008H, 00CH, 010H, 00DH, 010H, 00FH, 008H
+        BYTE    010H, 008H, 012H, 010H, 010H, 010H, 014H, 010H, 012H, 010H, 015H, 010H, 014H, 020H, 07FH, 010H
+        BYTE    07FH, 030H, 000H
 CMAP
         BYTE    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2
         BYTE    2,2,3,3,3,3,3,3,3,3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,254,254,254,254,254,254,254,254
